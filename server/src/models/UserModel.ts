@@ -1,6 +1,27 @@
-import mongoose from "mongoose";
+import mongoose, { model } from "mongoose";
 
 const userSchema = new mongoose.Schema({
+    fullName:{
+        type:String,
+        required:true,
+    },
+    username:{
+        type:String,
+        required:true,
+        unique:true,
+    },
+    password:{
+        type:String,
+        required:true
+    },
+    content:[
+        {
+            type:mongoose.Schema.Types.ObjectId,
+            ref:'Content'
+            
+        }
+
+    ]
 
 })
 
