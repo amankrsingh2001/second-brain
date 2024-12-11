@@ -55,7 +55,6 @@ export const login = asyncHandler(async (req:Request, res:Response)=>{
     const user = await User.findOne({
         username:username
     })
-
     
     if(!user?.id){
         throw new ApiError(411, "something went wrong", false)
@@ -80,3 +79,5 @@ export const login = asyncHandler(async (req:Request, res:Response)=>{
         } )
     )
 })
+
+
