@@ -40,9 +40,6 @@ export const signup = asyncHandler(async(req:Request, res:Response)=>{
 }) 
 
 
-
-
-
 export const login = asyncHandler(async (req:Request, res:Response)=>{
 
     const {success} = logininValidation.safeParse(req.body)

@@ -4,10 +4,6 @@ import { ApiError } from "../utils/ApiError"
 import jwt, {JwtPayload} from "jsonwebtoken"
 
 
-
-
-
-
 interface AuthenticatedRequest extends Request {
     id?: string | JwtPayload
 }
