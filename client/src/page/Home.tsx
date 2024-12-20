@@ -6,7 +6,7 @@ import { AddIcon } from "../components/icons/Add";
 
 export const Home = () =>{
 
-    return <div className="flex w-screen justify-between h-full ">
+    return <div className=" w-screen flex justify-between h-full ">
         
         <div className="w-[18%] bg-[#DADET1]">
                 <h1 className="text-2xl font-mono pt-4 text-center">Second Brain</h1>

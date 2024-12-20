@@ -16,7 +16,7 @@ export const Navbar = () => {
   };
 
   return (
-    <div className="w-full flex-col bg-[#DADEF2] shadow-md flex items-end justify-end">
+    <div className="w-full flex-col bg-custom-gradient shadow-md flex items-end justify-end">
       <div className="p-4 flex gap-4 items-end">
         <Button    onClick={signInModalHandler} variant="primary" text={"signup"} />
         <Button

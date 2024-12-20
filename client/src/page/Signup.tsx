@@ -28,10 +28,6 @@ export const Signup = ({onClick}:CloseIcon) => {
 
   return (
     <div className="flex w-full min-h-screen justify-center items-center flex-col">
-
-        <button onClick={onClick} className="w-full items-end flex justify-end text-4xl absolute top-5 pr-4 ">
-            <IoClose/>
-        </button>
         
 
             <form className="py-4 flex flex-col rounded-md px-6 w-[22%] shadow-2xl gap-4" onSubmit={(e)=>submitHandler(e)}>

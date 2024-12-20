@@ -1,0 +1,1 @@
+export const Types = ['image', 'video', 'audio', 'article', 'youtube', "twitter"]
