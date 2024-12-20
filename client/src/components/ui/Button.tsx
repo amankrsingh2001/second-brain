@@ -39,8 +39,8 @@ export const Button = ({ variant, text, animation, type, startIcon, onClick }: b
           </div>
         </div>
       ) : (
-        <div className=" flex items-center">
-          
+        <div className="flex items-center">
+  
             <button onClick={onClick} type={type} className={`${variantClasses[variant]} flex gap-2  items-center`}  >{startIcon}{text}</button>
         </div>
       )}

@@ -23,7 +23,7 @@ export const Home = () =>{
         </div>
 
                         
-        <div className="w-full flex flex-col shadow-lg pl-8 gap-6">
+        <div className="w-full h-screen flex flex-col shadow-lg pl-8 gap-6">
                         <div className="w-full gap-4 pr-5 py-2 flex  justify-end items-end">
                                 <Button variant="tertiary" text="Share Brain" startIcon={<ShareIcon/>}/>
                                 <Button variant="secondary" text="Add Content"  startIcon={<AddIcon/>}/>

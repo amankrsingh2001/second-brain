@@ -1,14 +1,10 @@
 import { useState } from "react"
 import { Button } from "../components/ui/Button"
 import { Input } from "../components/ui/Input"
-import { IoClose } from "react-icons/io5"
-
-interface Signin {
-    onClick:()=>void
-}
 
 
-export const Signin = ({onClick}:Signin) =>{
+
+export const Signin = () =>{
 
 
        const [data, setData] = useState({
@@ -27,9 +23,7 @@ export const Signin = ({onClick}:Signin) =>{
         }
     
     return <div className="flex w-full min-h-screen justify-center items-center">
-                      <button onClick={onClick} className="w-full items-end flex justify-end text-4xl absolute top-5 pr-4 ">
-                               <IoClose/>
-                           </button>
+                
                     <form className="py-4 flex flex-col rounded-md px-6 w-[22%] shadow-2xl gap-4" onSubmit={(e)=>submitHandler(e)}>
         
                         <Input placeholder="Username" label={"Username"} type="text" name="username" onChange={onChangeHandler}/> 

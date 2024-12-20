@@ -9,7 +9,7 @@ interface CloseIcon {
     onClick?:()=>void
 }
 
-export const Signup = ({onClick}:CloseIcon) => {
+export const Signup = () => {
     const [data, setData] = useState({
         fullName:"",
         username:"",
@@ -18,13 +18,17 @@ export const Signup = ({onClick}:CloseIcon) => {
 
     const submitHandler = (e:React.FormEvent<HTMLFormElement>)=>{
         e.preventDefault()
-            console.log(data)
+
     }
 
 
     const onChangeHandler = (e:React.ChangeEvent<HTMLInputElement>) =>{
         setData({...data, [e.target.name]:e.target.value})
     }
+
+
+
+
 
   return (
     <div className="flex w-full min-h-screen justify-center items-center flex-col">
