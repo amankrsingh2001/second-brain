@@ -1,13 +1,21 @@
 import mongoose from "mongoose";
 
 const contentSchema = new mongoose.Schema({
+    title:{
+        type:String,
+        required:true
+    },
     link:{
         type:String,
         required:true,
     },
+    description:{
+        type:String,
+        required:true
+    },
     type:{
         type:String,
-        enum:['image','video','audio', 'article'],
+        enum:['image', 'video', 'audio', 'article', 'youtube', "twitter"],
     },
     tags:[
         {
@@ -15,10 +23,6 @@ const contentSchema = new mongoose.Schema({
         ref:"Tag"
         }
     ],
-    title:{
-        type:String,
-        required:true
-    },
     userId:{
         type:mongoose.Schema.Types.ObjectId,
         ref:"User",
