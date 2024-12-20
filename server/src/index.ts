@@ -10,7 +10,6 @@ dotenv.config({
 
 dbConnect();
 
-
  
 app.use(express.json())
 

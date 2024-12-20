@@ -1,11 +1,12 @@
 import { Request, Response } from "express"
 import { logininValidation, signupValidation } from "../utils/zodValidation"
 import { ApiError } from "../utils/ApiError"
-import { User } from "../models/UserModel"
+
 import { ApiResponse } from "../utils/ApiResponse"
 import argon2 from 'argon2'
 import jwt from "jsonwebtoken"
 import { asyncHandler } from "../utils/AsyncHandler"
+import { User } from "../models/UserModel"
 
 export const signup = asyncHandler(async(req:Request, res:Response)=>{
     

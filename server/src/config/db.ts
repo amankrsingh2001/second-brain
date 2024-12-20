@@ -7,5 +7,4 @@ export const dbConnect = ()=> {
     }).catch((error:unknown)=>{
         throw new ApiError(500, "Db connection failed", false)
     })
-
 }

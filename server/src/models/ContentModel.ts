@@ -31,4 +31,4 @@ const contentSchema = new mongoose.Schema({
 })
 
 
-export const Content = mongoose.model("User", contentSchema)
+export const Content = mongoose.model("Content", contentSchema)
