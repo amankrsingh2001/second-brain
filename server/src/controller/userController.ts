@@ -11,6 +11,7 @@ import { User } from "../models/UserModel"
 export const signup = asyncHandler(async(req:Request, res:Response)=>{
     
     const {success} = signupValidation.safeParse(req.body)
+
     const {username, password, fullName} = req.body
 
     if(!success) throw new ApiError(411, "Please send valid data", false)
@@ -46,6 +47,8 @@ export const login = asyncHandler(async (req:Request, res:Response)=>{
     const {success} = logininValidation.safeParse(req.body)
     const {username, password} = req.body;
 
+
+
     if(!success){
         throw new ApiError(411, "Please enter valid data", false)
     }
@@ -71,7 +74,7 @@ export const login = asyncHandler(async (req:Request, res:Response)=>{
     })
 
     return res.status(200).json(
-        new ApiResponse(false, "login in successfully", {
+        new ApiResponse(true, "login in successfully", {
             sanitizedUser,
             token
         } )
