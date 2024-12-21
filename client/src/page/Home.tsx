@@ -3,8 +3,18 @@ import { Sidebar } from '../utils/SidebarData';
 import { Button } from "../components/ui/Button";
 import { ShareIcon } from "../components/icons/ShareIcon";
 import { AddIcon } from "../components/icons/Add";
+import { tokenState } from "@/atoms/tokenAtom";
+import { useRecoilValue } from "recoil";
+
+
 
 export const Home = () =>{
+
+
+    const token = useRecoilValue(tokenState)
+
+    console.log(token,"This is the token after login")
+
 
     return <div className=" w-screen flex justify-between h-full ">
         

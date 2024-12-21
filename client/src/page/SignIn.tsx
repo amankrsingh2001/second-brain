@@ -1,22 +1,38 @@
 import { useState } from "react"
 import { Button } from "../components/ui/Button"
 import { Input } from "../components/ui/Input"
+import axios from "axios"
+import { BASE_URL } from "@/utils/Type"
+import { useNavigate } from "react-router-dom"
+import { useRecoilValue, useSetRecoilState } from "recoil"
+import { tokenState } from "@/atoms/tokenAtom"
+
+
 
 
 
 export const Signin = () =>{
 
+const setToken = useSetRecoilState(tokenState)
+
+    const navigate = useNavigate()  
 
        const [data, setData] = useState({
             username:"",
             password:""
         })
+        
     
-        const submitHandler = (e:React.FormEvent<HTMLFormElement>)=>{
+
+        const submitHandler = async(e:React.FormEvent<HTMLFormElement>)=>{
             e.preventDefault()
-                console.log(data)
+            const signIn = await axios.post(BASE_URL+'user/login', data);
+            const token = signIn?.data?.data.token
+            setToken(token);
+            localStorage.setItem("token", token)
+            if(signIn?.data?.success) navigate('/dashboard')
         }
-    
+        
     
         const onChangeHandler = (e:React.ChangeEvent<HTMLInputElement>) =>{
             setData({...data, [e.target.name]:e.target.value})
